@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleAppOnlineShop
+namespace PetProjectOnlineShop2026
 {
     public class Cart
     {
@@ -25,9 +25,10 @@ namespace ConsoleAppOnlineShop
         }
        
 
-        public void AddProduct(Product product, double quantity)
+        public void AddProduct(Product product)
         {
-            order.Add(product, 1);
+           
+            order.Add(product, product.quantity);
         }
 
         public double CalculationSum()

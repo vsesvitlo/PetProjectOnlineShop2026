@@ -1,4 +1,4 @@
-﻿namespace ConsoleAppOnlineShop
+﻿namespace PetProjectOnlineShop2026
 {
     public class Client : User
     {
