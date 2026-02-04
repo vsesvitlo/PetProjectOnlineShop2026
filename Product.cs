@@ -14,16 +14,15 @@ namespace PetProjectOnlineShop2026
         public decimal price;
         public double quantity;
 
-        public Product(string id, string title, string description, decimal price, double quantity)
+        public Product(string id, string title, string description, decimal price)
         {
             this.id = id;
             this.title = title;
             this.description = description;
             this.price = price;
-            this.quantity = quantity;
         }
-        public void AddQuantity(){
-            quantity += 1;
+        public void AddQuantity(int a){
+            quantity += a;
         }
         public double GetQuantity()
         {

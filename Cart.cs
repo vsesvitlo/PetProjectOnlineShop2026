@@ -36,7 +36,7 @@ namespace PetProjectOnlineShop2026
             double result = 0;
             foreach (KeyValuePair<Product, double> item in order ) {
 
-                result += item.Key.price * item.Value;
+                result += Convert.ToDouble(item.Key.price) * item.Value;
             }
             return result;
         }

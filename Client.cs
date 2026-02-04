@@ -14,8 +14,12 @@
             this.addressNumder = addressNumder;
             this.birthdayDate = birthdayDate;
         }
+        /*
+        public void DeleteAccount(Product product)
+        {
+            cartNow.AddProduct(product);
+        }*/
 
-    
-        
+
     }
 }
