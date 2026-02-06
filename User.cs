@@ -25,10 +25,10 @@ namespace PetProjectOnlineShop2026
             this.idNumber = idNumber;
         }
 
-        public void AddProductCart(Product product)
+       /* public void AddProductCart(Product product)
         {
             cartNow.AddProduct(product);
-        }
+        }*/
         public void AddCart(Cart cart)
         {
 

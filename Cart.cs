@@ -25,10 +25,21 @@ namespace PetProjectOnlineShop2026
         }
        
 
-        public void AddProduct(Product product)
+        public void AddProduct(ProductList productList, Product product, int quantityClicks)
         {
            
-            order.Add(product, product.quantity);
+            order.Add(product, quantityClicks);
+           double rests = productList.GetQuantity(product);
+            if (quantityClicks > rests) {
+
+                Console.WriteLine($"Choose the less quantity, maximum {rests}");
+            }
+            else
+            {
+                productList.RemoveProductFromProductList(product, quantityClicks);
+
+            }
+
         }
 
         public double CalculationSum()
@@ -41,4 +52,5 @@ namespace PetProjectOnlineShop2026
             return result;
         }
     }
+
 }

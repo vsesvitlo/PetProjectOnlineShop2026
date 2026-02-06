@@ -12,7 +12,6 @@ namespace PetProjectOnlineShop2026
         public string title;
         public string description;
         public decimal price;
-        public double quantity;
 
         public Product(string id, string title, string description, decimal price)
         {
@@ -20,17 +19,6 @@ namespace PetProjectOnlineShop2026
             this.title = title;
             this.description = description;
             this.price = price;
-        }
-        public void AddQuantity(int a){
-            quantity += a;
-        }
-        public double GetQuantity()
-        {
-            return quantity;
-        }
-        public decimal CalculationPrice(){
-            decimal result = price * (decimal)quantity;
-            return result;
         }
     }
 }

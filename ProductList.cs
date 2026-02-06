@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,7 +28,8 @@ namespace PetProjectOnlineShop2026
             {
                 productData.Add(product, quantity);
             }
-            else {
+            else
+            {
                 productData[product] += quantity;
             }
         }
@@ -46,24 +48,14 @@ namespace PetProjectOnlineShop2026
             foreach (KeyValuePair<Product, double> item in productData)
             {
 
-                result += item.Key.price * (decimal) item.Value;
+                result += item.Key.price * (decimal)item.Value;
             }
             return result;
-        }
-        public decimal CalculationQuantityList(ProductList productList, Product product )
+        } 
+        public double GetQuantity( Product product)
         {
-            decimal result = 0;
-            if (productData.ContainsKey(product))
-            {
-                foreach (KeyValuePair<Product, double> item in productData)
-                {
-
-                    result += (decimal)item.Value;
-                }
-
-            }
-            
-            return result;
+            return productData[product];
         }
+
     }
 }

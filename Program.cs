@@ -40,17 +40,20 @@
 
             listOfProducts.AddProductToProductList(bread, 6);
             listOfProducts.AddProductToProductList(bread, 4);
+            Console.WriteLine(listOfProducts.productData[bread]);
+            // bread.AddQuantity();
+            //Console.WriteLine(listOfProducts.CalculationQuantityPerProduct(bread);
 
-           // bread.AddQuantity();
-           Console.WriteLine(listOfProducts.CalculationQuantityList(listOfProducts, bread));
-           // bread.AddQuantity();
-           // Console.WriteLine(bread.CalculationPrice());
+            // bread.AddQuantity();
+            // Console.WriteLine(bread.CalculationPrice());
 
-
-            cart.AddProduct(milk);
-            cart.AddProduct(bread);
+            cart.AddProduct(listOfProducts, milk, 2);
+            cart.AddProduct(listOfProducts, bread, 100);
             cart.CalculationSum();
-           // Console.WriteLine(cart.CalculationSum());
+            Console.WriteLine(cart.CalculationSum());
+            Console.WriteLine(listOfProducts.productData[bread]);
+            Console.WriteLine(listOfProducts.productData[milk]);
+           ///// Console.WriteLine(cart.)
         }
     }
 }
