@@ -19,6 +19,25 @@
         {
             cartNow.AddProduct(product);
         }*/
+        public void AddProductToProductList(Product product, double quantity, Dictionary<Product, double> productData)
+        {
+            if (!productData.ContainsKey(product))
+            {
+                productData.Add(product, quantity);
+            }
+            else
+            {
+                productData[product] += quantity;
+            }
+        }
+
+        public void RemoveProductFromProductList(Product product, double quantity, Dictionary<Product, double> productData)
+        {
+            if (productData.ContainsKey(product))
+            {
+                productData[product] -= quantity;
+            }
+        }
 
 
     }

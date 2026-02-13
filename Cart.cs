@@ -30,14 +30,14 @@ namespace PetProjectOnlineShop2026
            
             order.Add(product, quantityClicks);
            double rests = productList.GetQuantity(product);
+            double quantityClicksNew = Convert.ToDouble(quantityClicks);
             if (quantityClicks > rests) {
-
-                Console.WriteLine($"Choose the less quantity, maximum {rests}");
+               // Console.WriteLine($"Choose the less quantity, maximum {rests} of {product.title}");
+                quantityClicksNew = rests;
             }
             else
             {
                 productList.RemoveProductFromProductList(product, quantityClicks);
-
             }
 
         }

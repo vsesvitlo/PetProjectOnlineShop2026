@@ -11,7 +11,10 @@
             Product water = new Product("00004", "Mineral water", "The water from...", 14);
             Product candies = new Product("00005", "Natural candies", "Frytty-tutty candies...", 55);
             Product yogurt= new Product("00006", "Fresh yogurt", "Fresh milk...", 16);
-           
+            Client client = new Client("Prague", "Hlavni", "227", new DateOnly(1991, 5, 15), "Jan", "Buchta", "09cjfen", null, null, "997432");
+            Cart cart = new Cart(DateTime.Now, new TimeSpan(0, 12, 6, 76), client, "");
+            ShopAssistant shopAssistant = new ShopAssistant("Hanna", "Braun", "0jubt", cart, null, "A00001");
+
             listOfProducts.AddProductToProductList(bread, 16);
             listOfProducts.AddProductToProductList(milk, 5);
             listOfProducts.AddProductToProductList(cheese, 13);
@@ -34,10 +37,8 @@
 
              Console.WriteLine(res);*/
 
-            Client client = new Client("Prague", "Hlavni", "227", new DateOnly(1991, 5, 15), "Jan", "Buchta", "09cjfen", null, null, "997432");
-            Cart cart = new Cart(DateTime.Now, new TimeSpan(0, 12, 6, 76), client, "");
-           // CalculationPriceList(ProductList productList)
 
+            // CalculationPriceList(ProductList productList)
             listOfProducts.AddProductToProductList(bread, 6);
             listOfProducts.AddProductToProductList(bread, 4);
             Console.WriteLine(listOfProducts.productData[bread]);

@@ -21,7 +21,6 @@ namespace PetProjectOnlineShop2026
         {
             this.productData = productData;
         }
-
         public void AddProductToProductList(Product product, double quantity)
         {
             if (!productData.ContainsKey(product))
